@@ -21,10 +21,10 @@
        <li class="disabled">
                 <a aria-label="Previous" href="#"><span aria-hidden="true">« </span></a>
             </li>
-            @for(int i= 1; i < (ViewBag.pagcount+1); i++)
+            @for(int i= 1; i<=(ViewBag.pagcount+1); i++)
             {
-                <li  >
-                    <a href="#">@i <span class="sr-only">
+                <li class="@(((int)ViewBag.pagId==i)?"active":"")">
+                    <a href="/Hom/Index?pagid=@i">@i <span class="sr-only">
                         (current)
                     </span></a>
                 </li>
